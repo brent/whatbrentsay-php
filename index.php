@@ -1,33 +1,17 @@
-<?php				
+<?php
 	
-	// where areticles sit
-	$base_dir = "articles";
+	require_once("includes/functions.php");
 	
-	// array of all articles in the base_dir
-	$articles = scandir($base_dir);
+	// where articles sit
+	$article_dir = "articles";
 	
-	foreach($articles as $article) {
-		
-		// only operate on folders that have metadata.json files 
-		if(file_exists("{$base_dir}/{$article}/metadata.json")) {
-		
-			$file = file_get_contents("{$base_dir}/{$article}/metadata.json");
-			$article_data = json_decode($file);
-			
-			// grab all the object variables then put them in an array
-			$article_data = get_object_vars($article_data);
-			
-			// add article root path to article data array
-			$article_data["base_path"] = $base_dir."/".$article."/";
-			
-			// yay, multidimensional arrays
-			$articles_array[] = $article_data;
-			
-		}
-	}
+	// where bits live
+	$bits_dir = "bits";
 	
-	// reverse sort the array by each article's id
-	arsort($articles_array);
+	
+	$articles_array = get_content($article_dir);
+	//$bits_array = get_content($bits_dir);
+	
 	
 ?>
 <!DOCTYPE html>
@@ -56,10 +40,9 @@
 								
 			</div><!-- END .left -->
 			
-			
 			<div class="right main">
 			
-			<?php foreach($articles_array as $single_article): ?>
+			<?php $count=0; foreach($articles_array as $single_article): ?>
 					
 				<div class="article">
 				
@@ -81,8 +64,18 @@
 					</a>
 									
 				</div><!-- END .article -->
-										
-			<?php endforeach; ?>
+				<!--
+				<?php if($count==0): ?>
+				<div class="bits_container">
+					
+					<div class="bit">
+						<a href="<?php echo $bits_array[0]['base_path']; ?>">Bit <?php echo $bits_array[0]['id'].": ".$bits_array[0]['title']; ?></a>
+					</div>
+				
+				</div>
+				<?php endif; ?>
+				-->
+			<?php $count++; endforeach; ?>
 			
 			</div><!-- END .right.main -->
 		
