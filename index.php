@@ -10,7 +10,7 @@
 	
 	
 	$articles_array = get_content($article_dir);
-	//$bits_array = get_content($bits_dir);
+	$bits_array = get_content($bits_dir);
 	
 	
 ?>
@@ -64,7 +64,7 @@
 					</a>
 									
 				</div><!-- END .article -->
-				<!--
+
 				<?php if($count==0): ?>
 				<div class="bits_container">
 					
@@ -74,7 +74,7 @@
 				
 				</div>
 				<?php endif; ?>
-				-->
+				
 			<?php $count++; endforeach; ?>
 			
 			</div><!-- END .right.main -->

@@ -90,3 +90,12 @@ div.right {
 	bottom: 10px;
 	left: -10px;
 }
+
+.bits_container {
+	padding: 20px 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 24px;
+}
