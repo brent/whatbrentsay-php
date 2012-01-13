@@ -55,7 +55,6 @@
         echo "<div style='margin: 60px auto; width: 500px'>";
         echo "<h1 style='font-family: sans-serif; font-weight: 300; text-align: center;'>There was a problem with Twig.</h1>";
         echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>" . $message . "";
-        echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>You are seeing this because that is set as your template directory in the app configuration.";
         echo "</div>";
 
         exit;
