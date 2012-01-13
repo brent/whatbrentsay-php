@@ -43,6 +43,21 @@
     require_once(LIB.DS.'Twig'.DS.'Autoloader.php');
 
 	Twig_Autoloader::register();
-	$loader = new Twig_Loader_Filesystem(APP.'templates'.DS.$template);
-	$twig = new Twig_Environment($loader);
+	
+	try {
+    	$loader = new Twig_Loader_Filesystem(APP.'templates'.DS.$template);
+    	$twig = new Twig_Environment($loader);
+    } catch (Exception $e) {
+        $message = $e->getMessage();
+        $message = str_replace("\"/", "directory <span style='background: #efefef; padding: 3px; font-family: monospace'>/", $message);
+        $message = str_replace("\" directory", "</span>", $message);
+    
+        echo "<div style='margin: 60px auto; width: 500px'>";
+        echo "<h1 style='font-family: sans-serif; font-weight: 300; text-align: center;'>There was a problem with Twig.</h1>";
+        echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>" . $message . "";
+        echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>You are seeing this because that is set as your template directory in the app configuration.";
+        echo "</div>";
+
+        exit;
+    }
 ?>

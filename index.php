@@ -32,16 +32,9 @@
     	$vars['title'] = $title;
     	$vars['articles'] = $articles_array;
 
-      if (is_dir(APP.$template)) {
         $template = $twig->loadTemplate('index.html');
         echo $template->render($vars);
-      } else {
-        echo "<div style='margin: 60px auto; width: 500px'>";
-        echo "<h1 style='font-family: sans-serif; font-weight: 300;'>Your template directory is empty.</h1>";
-        echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>You need to have at least an <span style='background: #efefef; padding: 3px; font-family: monospace'>index.html</span> file in your template directory.";
-        echo "</div>";
-      }
-  } else {
+    } else {
         echo "<div style='margin: 60px auto; width: 500px'>";
         echo "<h1 style='font-family: sans-serif; font-weight: 300;'>You need to configure your app.</h1>";
         echo "<p style='font: 16px/1.5 sans-serif; font-weight: 300;'>Go to the <span style='background: #efefef; padding: 3px; font-family: monospace'>app/</span> directory and set your template path and site title.</p>";
