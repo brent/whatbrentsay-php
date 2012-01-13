@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}			
+			<div class="right main">
+			{% for article in articles %}
+			<?php foreach($articles_array as $single_article): ?>
+					
+				<div class="article">
+				
+					<div class="metadata">
+						<h2 class="title">
+							<a href="{{ article.base_path }}">
+								{{ article.title }}
+							</a>
+						</h2>
+						
+						<h3 class="date">
+							{{ article.date }}
+						</h3>
+						
+					</div><!-- END .metadata -->
+					
+					<a href="{{ article.base_path }}">
+						<img class="thumb" src="{{ article.base_path }}{{ article.thumbnail }}" />
+					</a>
+									
+				</div><!-- END .article -->
+										
+            {% endfor %}
+			
+			</div><!-- END .right.main -->
+		
+{% endblock %}
+			
