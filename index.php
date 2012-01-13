@@ -26,8 +26,9 @@
     		}
     	}
 
-    	// reverse sort the array by each article's id
-    	arsort($articles_array);
+      // reverse sort the array by each article's id if there are posts to display.
+      if (count($articles_array) > 0)
+        arsort($articles_array);
 
     	$vars['title'] = $title;
     	$vars['articles'] = $articles_array;
