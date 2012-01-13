@@ -10,7 +10,6 @@
 	
 	
 	$articles_array = get_content($article_dir);
-	$bits_array = get_content($bits_dir);
 	
 	
 ?>
@@ -42,7 +41,7 @@
 			
 			<div class="right main">
 			
-			<?php $count=0; foreach($articles_array as $single_article): ?>
+			<?php foreach($articles_array as $single_article): ?>
 					
 				<div class="article">
 				
@@ -64,18 +63,8 @@
 					</a>
 									
 				</div><!-- END .article -->
-
-				<?php if($count==0): ?>
-				<div class="bits_container">
-					
-					<div class="bit">
-						<a href="<?php echo $bits_array[0]['base_path']; ?>">Bit <?php echo $bits_array[0]['id'].": ".$bits_array[0]['title']; ?></a>
-					</div>
 				
-				</div>
-				<?php endif; ?>
-				
-			<?php $count++; endforeach; ?>
+			<?php endforeach; ?>
 			
 			</div><!-- END .right.main -->
 		
