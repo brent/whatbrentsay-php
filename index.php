@@ -9,7 +9,7 @@
 	$bits_dir = "bits";
 	
 	
-	$articles_array = get_content($article_dir);
+	$articles_array = get_content_with_metadata($article_dir);
 	
 	
 ?>
