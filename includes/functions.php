@@ -24,7 +24,7 @@ function get_content_with_metadata($content_dir) {
 		} 
 	}
 	// reverse sort the array by content id
-	arsort($content_array);
+	rsort($content_array);
 	return($content_array);
 }
 
@@ -34,36 +34,61 @@ function get_content_no_metadata($content_dir) {
 	
 	foreach($all_content as $content) {
 		
-		// sets $content to the name of the folder
-		$content_data['folder_name'] = $content;
+		if(is_dir("{$content_dir}/{$content}")) {
+
+			// sets $content to the name of the folder
+			$content_data['folder_name'] = $content;
+			
+			// open the directory the content is in
+			$single_dir = opendir("{$content_dir}/{$content}");
 		
-		// open the directory the content is in
-		$single_dir = opendir("{$content_dir}/{$content}");
-	
-		// read the files in the directory, then look for
-		// files with a .txt extension and add that file's
-		// name to the $content_data array
-		while(($file = readdir($single_dir)) !== false) {
-			
-			$regex = "/(.+txt|.+md)/";
-			
-			if(preg_match($regex, $file, $matches)) {
-				$content_data['title'] = $matches[0];
-			} else {
-				$content_data['title'] = null;
+			// read the files in the directory, then look for
+			// files with a .txt (or .md) extension and add just
+			// that file's name to the $content_data array
+			while(($file = readdir($single_dir)) !== false) {
+				
+				$regex = "/(.+).txt/";
+				
+				if(preg_match($regex, $file, $matches)) {
+					$content_data['title'] = $matches[1];
+				} else {
+					$content_data['title'] = null;
+				}
 			}
-		}
-		
-		// ensures you only return folders with .txt files
-		if(isset($content_data['title'])) {
-			$content_data['title'] = cleanup_title($content_data['title']);
-			$content_array[] = $content_data;
+			
+			// ensures you only return folders with .txt files
+			if(isset($content_data['title'])) {
+				$content_data['clean_title'] = cleanup_title($content_data['title']);
+				$content_array[] = $content_data;
+			}
+			
 		}
 	
 	}
 	
-	arsort($content_array);
+	rsort($content_array);
 	return($content_array);
+	
+}
+
+function get_content_name($content_dir) {
+	
+	if(is_dir($content_dir)) {
+
+		while(($file = readdir($content_dir)) !== false) {
+			
+			$regex = "/(.+).txt/";
+			
+			if(preg_match($regex, $file, $matches)) {
+				$title = $matches[1];
+			} else {
+				$title = null;
+			}
+		}
+		
+	}
+	
+	return $title;
 	
 }
 

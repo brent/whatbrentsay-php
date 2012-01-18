@@ -10,7 +10,7 @@
 	
 	
 	$articles_array = get_content_with_metadata($article_dir);
-	
+	$bits_array = get_content_no_metadata($bits_dir);
 	
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
 			
 			<div class="right main">
 			
-			<?php foreach($articles_array as $single_article): ?>
+			<?php $count = 0; foreach($articles_array as $single_article): ?>
 					
 				<a class="article" href="<?php echo $single_article['base_path']; ?>">
 					
@@ -53,7 +53,17 @@
 									
 				</a><!-- END .article -->
 				
-			<?php endforeach; ?>
+				<?php if($count==0): ?>
+				
+					<div class="bits_container">
+					
+						<a href="<?php echo "{$bits_dir}/{$bits_array[0]['folder_name']}/{$bits_array[0]['title']}"; ?>">Bit <?php echo $bits_array[0]['folder_name']; ?>: <?php echo $bits_array[0]['clean_title']; ?></a>
+					
+					</div><!-- END .bits_container -->
+				
+				<?php endif; ?>
+				
+			<?php $count++; endforeach; ?>
 			
 			</div><!-- END .right.main -->
 		

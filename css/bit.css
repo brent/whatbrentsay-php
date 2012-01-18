@@ -1,0 +1,13 @@
+body {
+	font-family: Lato, sans-serif;
+}
+
+.wrapper {
+	width: 600px;
+	margin: 100px auto 0;
+}
+
+.bit_title {
+	font-size: 28px;
+	margin-bottom: 20px;
+}
