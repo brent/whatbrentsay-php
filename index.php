@@ -43,26 +43,15 @@
 			
 			<?php foreach($articles_array as $single_article): ?>
 					
-				<div class="article">
-				
-					<div class="metadata">
-						<h2 class="title">
-							<a href="<?php echo $single_article['base_path']; ?>">
-								<?php echo $single_article['title']; ?>
-							</a>
-						</h2>
-						
-						<h3 class="date">
-							<?php echo $single_article['date']; ?>
-						</h3>
-						
-					</div><!-- END .metadata -->
+				<a class="article" href="<?php echo $single_article['base_path']; ?>">
 					
-					<a href="<?php echo $single_article['base_path']; ?>">
-						<img class="thumb" src="<?php echo $single_article['base_path'].$single_article['thumbnail']; ?>" />
-					</a>
+					<div class="metadata">
+						<h2 class="title"><?php echo $single_article['title']; ?><span class="date"> on <?php echo $single_article['date']; ?></span></h2>
+					</div>
+					
+					<img class="thumb" src="<?php echo $single_article['base_path'].$single_article['thumbnail']; ?>" />
 									
-				</div><!-- END .article -->
+				</a><!-- END .article -->
 				
 			<?php endforeach; ?>
 			
@@ -83,5 +72,27 @@
 			  })();
 			
 			</script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+									
+					$(".article").hover(function(){
+					
+						var metaHeight = $(this).children(".metadata").outerHeight();
+					
+						$(this).children(".thumb").animate({
+							bottom: metaHeight
+						}, 200);
+					
+					}, function() {
+					
+						$(this).children(".thumb").animate({
+							bottom: 0
+						}, 200);
+					
+					});
+				});
+			</script>
+
 	</body>
 </html>

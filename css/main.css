@@ -64,32 +64,40 @@ div.right {
 }
 
 .article {
-	width: 640px;
-	height: 300px;
+	display: block;
 	position: relative;
 	border: 1px solid #ddd;
 	margin-bottom: 40px;
+	position: relative;
+	width: 638px;
+	height: 298px;
+	overflow: hidden;
 }
 
-.metadata .title, .metadata .date {
-	position: absolute;
-	color: #fff;
+.metadata {
 	background: #444;
-	background: rgba(68,68,68,.9);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	padding: 10px;
-}
-
-.metadata .title {
-	font-size: 24px;
-	bottom: 55px;
-	left: -20px;
+	color: white;
+	font-size: 32px;
+	box-shadow: inset -3px 3px 5px #333;
+	border-top: 1px solid #000;
 }
 
 .metadata .date {
 	font-size: 16px;
-	bottom: 10px;
-	left: -10px;
+	color: #ddd;
 }
+
+img.thumb {
+	background: #eee;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+}
+
 
 .bits_container {
 	padding: 20px 0;
