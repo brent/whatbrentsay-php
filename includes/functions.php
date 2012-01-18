@@ -54,12 +54,13 @@ function get_content_no_metadata($content_dir) {
 				} else {
 					$content_data['title'] = null;
 				}
-			}
-			
-			// ensures you only return folders with .txt files
-			if(isset($content_data['title'])) {
-				$content_data['clean_title'] = cleanup_title($content_data['title']);
-				$content_array[] = $content_data;
+				
+				// ensures you only return folders with .txt files
+				if(isset($content_data['title'])) {
+					$content_data['clean_title'] = cleanup_title($content_data['title']);
+					$content_array[] = $content_data;
+				}
+				
 			}
 			
 		}
