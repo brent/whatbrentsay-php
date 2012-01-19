@@ -61,6 +61,11 @@ div.left a:hover {
 
 div.right {
 	float: left;
+	width: 640px;
+}
+
+.row {
+	overflow: hidden;
 }
 
 .article {
@@ -72,6 +77,19 @@ div.right {
 	width: 638px;
 	height: 298px;
 	overflow: hidden;
+}
+
+.article.small {
+	width: 300px;
+	height: 139px;
+}
+
+.article.small.left {
+	float: left
+}
+
+.article.small.right {
+	float: right;
 }
 
 .metadata {
@@ -86,9 +104,17 @@ div.right {
 	box-shadow: inset -3px 3px 5px #333;
 }
 
+.article.small .metadata {
+	font-size: 16px;
+}
+
 .metadata .date {
 	font-size: 16px;
 	color: #ddd;
+}
+
+.article.small .date {
+	font-size: 12px;
 }
 
 img.thumb {
@@ -105,5 +131,9 @@ img.thumb {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 40px;
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
+}
+
+.bits_container a:hover {
+	text-decoration: underline;
 }

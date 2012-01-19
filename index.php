@@ -42,8 +42,12 @@
 			<div class="right main">
 			
 			<?php $count = 0; foreach($articles_array as $single_article): ?>
-					
-				<a class="article" href="<?php echo $single_article['base_path']; ?>">
+				
+				<?php if($count > 0 && $count % 2 !== 0): ?>
+				<div class="row">
+				<?php endif; ?>
+				
+				<a class="article <?php if($count > 0): ?>small<?php endif; ?> <?php if($count % 2 !== 0): ?>left<?php else: ?>right<?php endif; ?>" href="<?php echo $single_article['base_path']; ?>">
 					
 					<div class="metadata">
 						<h2 class="title"><?php echo $single_article['title']; ?><span class="date"> on <?php echo $single_article['date']; ?></span></h2>
@@ -52,6 +56,10 @@
 					<img class="thumb" src="<?php echo $single_article['base_path'].$single_article['thumbnail']; ?>" />
 									
 				</a><!-- END .article -->
+				
+				<?php if($count > 0 && $count % 2 === 0): ?>
+				</div>
+				<?php endif; ?>
 				
 				<?php if($count==0): ?>
 				
