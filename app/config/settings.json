@@ -1,3 +1,4 @@
 {
-	"blogTitle"		:	"What Brent Say"
+	"blogTitle"			:	"What Brent Say",
+	"postsPerPage"		:	"5"
 }

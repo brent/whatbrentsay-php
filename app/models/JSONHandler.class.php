@@ -12,11 +12,5 @@ class JSONHandler {
 		return($jsonArray);
 		
 	}
-	
-	public function test() {
-		echo "Hello world";
-	}
 
 }
-
-$json = new JSONHandler();

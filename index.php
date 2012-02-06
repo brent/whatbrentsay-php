@@ -1,6 +1,15 @@
 <?php
-
-	require_once("app/config/init.php");
+	
+	# App wide settings
+	$settings = array(
 		
-	$data = $json->read(CONFIG.DS."settings.json");
-	echo $twig->render("home.php", $data);
+		// Site title
+		"siteTitle" => "What Brent Say",
+		
+		// Amount of articles displayed per page
+		"articlesPerPage" => "5"
+	
+	);
+	
+	require_once("app/config/init.php");
+	require_once("app/controllers/index.php");

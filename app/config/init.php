@@ -19,8 +19,9 @@
 	defined("SETINGS") ? null : define("SETTINGS", "settings.json");
 	
 	# Necessary classes
-	require_once(MODELS.DS."JSONHandler.class.php");
-	require_once(CONTROLLERS.DS."load.class.php");
+	//require_once(MODELS.DS."JSONHandler.class.php");
+	require_once(MODELS.DS."load.class.php");
+	require_once(MODELS.DS."post.class.php");
 	
 	# Twig
 	require_once(LIB.DS."Twig".DS."Autoloader.php");
