@@ -4,6 +4,7 @@
 		<title>{{ siteTitle }}</title>
 		<link rel="stylesheet" type="text/css" href="public/css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="public/css/main.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 	
@@ -24,15 +25,29 @@
 			</div><!-- END .left -->
 			
 			<div class="right main">
-				
+
+				{% for article in articles %}
 				<div class="row">
-					<a class="article" href="">	
+				
+					<a class="article" href="{{ article.dir }}">
+					
+						<div class="metadata">
+							<h2 class="title">{{ article.title }} <span class="date">{{ article.date }}</span></h2>
+						</div><!-- END .metadata -->
+						
+						<img class="thumb" src="{{ article.dir }}/{{ article.thumbnail }}" />
+						
 					</a><!-- END .article -->
-				</div>
+					
+				</div><!-- END .row -->
+				{% endfor %}
 				
 			</div><!-- END .right.main -->
 			
 		</div><!-- END #wrapper -->
-	
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="public/js/site.js"></script>
+		
 	</body>
 </html>

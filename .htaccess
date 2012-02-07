@@ -1,3 +1,1 @@
 RewriteEngine on
-
-RewriteRule bits/([^/]+)/([^/]+) bits/index.php?folder=$1&bit=$2

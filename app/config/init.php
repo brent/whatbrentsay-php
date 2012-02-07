@@ -15,9 +15,10 @@
 	defined("MODELS") ? null : define("MODELS", APP.DS."models");
 	defined("VIEWS") ? null : define("VIEWS", APP.DS."views");
 	
-	# App settings
-	defined("SETINGS") ? null : define("SETTINGS", "settings.json");
+	# Public directories
+	defined("PUBLIC") ? null : define("PUBLIC", SITE_ROOT.DS."public"); 
 	
+		
 	# Necessary classes
 	//require_once(MODELS.DS."JSONHandler.class.php");
 	require_once(MODELS.DS."load.class.php");
