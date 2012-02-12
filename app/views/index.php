@@ -25,11 +25,29 @@
 			</div><!-- END .left -->
 			
 			<div class="right main">
-
-				{% for article in articles %}
+				
 				<div class="row">
 				
-					<a class="article" href="{{ article.dir }}">
+					<a class="article" href="{{ mostRecentArticle.dir }}">
+					
+						<div class="metadata">
+							<h2 class="title">{{ mostRecentArticle.title }} <span class="date">{{ mostRecentArticle.date }}</span></h2>
+						</div><!-- END .metadata -->
+						
+						<img class="thumb" src="{{ mostRecentArticle.dir }}/{{ mostRecentArticle.thumbnail }}" />
+						
+					</a><!-- END .article -->
+					
+				</div><!-- END .row -->
+				
+				<div class="bits_container">
+					<a href="{{ bit.dir }}">Bit {{bit.id }}: {{ bit.title }}</a>
+				</div><!-- END .bits_container -->
+				
+				<div class="row">
+				{% for article in articles %}
+				
+					<a class="article small {{ cycle(['right', 'left'], loop.index) }}" href="{{ article.dir }}">
 					
 						<div class="metadata">
 							<h2 class="title">{{ article.title }} <span class="date">{{ article.date }}</span></h2>
@@ -38,8 +56,11 @@
 						<img class="thumb" src="{{ article.dir }}/{{ article.thumbnail }}" />
 						
 					</a><!-- END .article -->
-					
+				
+				{% if loop.index is divisibleby(2) %}	
 				</div><!-- END .row -->
+				<div class="row">
+				{% endif %}
 				{% endfor %}
 				
 			</div><!-- END .right.main -->

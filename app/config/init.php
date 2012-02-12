@@ -21,7 +21,6 @@
 		
 	# Necessary classes
 	//require_once(MODELS.DS."JSONHandler.class.php");
-	require_once(MODELS.DS."load.class.php");
 	require_once(MODELS.DS."post.class.php");
 	
 	# Twig

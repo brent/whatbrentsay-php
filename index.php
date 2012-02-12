@@ -6,8 +6,11 @@
 		// Site title
 		"siteTitle" 		=> "What Brent Say",
 		
-		// HTMLPosts path (from web root)
-		"HTMLPosts"			=> "public/articles",
+		// HTMLPosts folder
+		"HTMLPosts"			=> "articles",
+		
+		// simplePosts folder
+		"simplePosts"		=>	"bits",
 		
 		// HTMLPost metadata name
 		"metadata"			=> "metadata.json",
@@ -17,8 +20,8 @@
 	
 	);
 	
+	//echo strtotime("Jan 3, 2012");
+	
 	require_once("app/config/init.php");
-	
-	# Get URL params
-	
+		
 	require_once("app/controllers/index.php");
