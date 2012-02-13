@@ -28,32 +28,32 @@
 				
 				<div class="row">
 				
-					<a class="article" href="{{ mostRecentArticle.dir }}">
+					<a class="article" href="{{ mostRecentHTMLPost.dir }}">
 					
 						<div class="metadata">
-							<h2 class="title">{{ mostRecentArticle.title }} <span class="date">{{ mostRecentArticle.date }}</span></h2>
+							<h2 class="title">{{ mostRecentHTMLPost.title }} <span class="date">{{ mostRecentHTMLPost.date }}</span></h2>
 						</div><!-- END .metadata -->
 						
-						<img class="thumb" src="{{ mostRecentArticle.dir }}/{{ mostRecentArticle.thumbnail }}" />
+						<img class="thumb" src="{{ mostRecentHTMLPost.dir }}/{{ mostRecentHTMLPost.thumbnail }}" />
 						
 					</a><!-- END .article -->
 					
 				</div><!-- END .row -->
 				
 				<div class="bits_container">
-					<a href="{{ bit.dir }}">Bit {{bit.id }}: {{ bit.title }}</a>
+					<a href="{{ mostRecentSimplePost.dir }}">Bit {{ mostRecentSimplePost.id }}: {{ mostRecentSimplePost.title }}</a>
 				</div><!-- END .bits_container -->
 				
 				<div class="row">
-				{% for article in articles %}
+				{% for HTMLPost in HTMLPosts %}
 				
-					<a class="article small {{ cycle(['right', 'left'], loop.index) }}" href="{{ article.dir }}">
+					<a class="article small {{ cycle(['right', 'left'], loop.index) }}" href="{{ HTMLPost.dir }}">
 					
 						<div class="metadata">
-							<h2 class="title">{{ article.title }} <span class="date">{{ article.date }}</span></h2>
+							<h2 class="title">{{ HTMLPost.title }} <span class="date">{{ HTMLPost.date }}</span></h2>
 						</div><!-- END .metadata -->
 						
-						<img class="thumb" src="{{ article.dir }}/{{ article.thumbnail }}" />
+						<img class="thumb" src="{{ HTMLPost.dir }}/{{ HTMLPost.thumbnail }}" />
 						
 					</a><!-- END .article -->
 				

@@ -2,20 +2,26 @@
 
 	require_once(MODELS.DS."HTMLPost.class.php");
 	require_once(MODELS.DS."simplePost.class.php");
-	//$data = $json->read(CONFIG.DS."settings.json");
 	
 	$data[] = $settings;
 	
+	# All HTMLPosts
 	$HTMLPosts 		= HTMLPost::get_all();
+	
+	# All simplePosts
 	$simplePosts	= simplePost::get_all();
 	
-	$mostRecentArticle 	= array_shift($HTMLPosts);
-	$mostRecentBit		= array_shift($simplePosts);
+	# Most Recent HTMLPost
+	$mostRecentHTMLPost 	= array_shift($HTMLPosts);
 	
-	$data['mostRecentArticle']	= $mostRecentArticle;
-	$data['articles']			= $HTMLPosts;
-	$data['bit']				= $mostRecentBit;
+	# Most Recent simplePost
+	$mostRecentSimplePost	= array_shift($simplePosts);
+	
+	
+	# Add whatever data you want to use to the data array
+	$data['mostRecentHTMLPost']		= $mostRecentHTMLPost;
+	$data['HTMLPosts']				= $HTMLPosts;
+	$data['mostRecentSimplePost']	= $mostRecentSimplePost;
 		
+	# Send data to dat template
 	echo $twig->render("index.php", $data);
-	
-	//print_r($data);

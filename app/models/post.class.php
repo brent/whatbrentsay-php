@@ -11,7 +11,7 @@ class Post {
 			$post->unixdate = strtotime($post->date);
 		}
 		
-		usort($allPosts, array("Post", "sortByDate"));
+		usort($allPosts, array("Post", "sort_by_date"));
 		
 		return $allPosts;
 		
@@ -46,7 +46,7 @@ class Post {
 			
 	}
 	
-	 public static function sortByDate($a, $b) {
+	 public static function sort_by_date($a, $b) {
         if ($a->unixdate > $b->unixdate) return -1;
         else if($a->unixdate == $b->unixdate) return 0;
         else return 1;
