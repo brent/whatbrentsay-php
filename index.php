@@ -6,11 +6,11 @@
 		# Site title
 		"siteTitle" 		=> "What Brent Say",
 		
-		# HTMLPosts folder (adjust for your folder name)
-		"HTMLPosts"			=> "HTMLPosts",
+		# HTMLPost folder (adjust for your folder name)
+		"HTMLPost"			=> "articles",
 		
-		# simplePosts folder (adjust for your folder name)
-		"simplePosts"		=>	"simplePosts",
+		# simplePost folder (adjust for your folder name)
+		"simplePost"		=>	"bits",
 		
 		# HTMLPost metadata name
 		"metadata"			=> "metadata.json",
@@ -21,32 +21,18 @@
 	);
 	
 	require_once("app/config/init.php");
-	
-	/*
-
-	print_r($_GET);
-	
-	echo "<br /><hr />";
-	
-	if(empty($_GET['rt'])) {
-		echo "No params; index.php";
-	} else {
-	
-		$parts = explode("/", $_GET['rt']);
 		
-		echo "controller: ".array_shift($parts);
-		echo "<br />";
-		echo "parameter: ".array_shift($parts);
-		echo "<br />";
-		if(!empty($parts)) {
-			echo "more vars: ";
-			foreach($parts as $part) {
-				echo $part;
-				echo ", ";
-			}
-		}
+	$URIParts = explode("/", $_SERVER['QUERY_STRING']);
+	
+	$contentType 	= array_search($URIParts[1], $settings);
+	
+	if(empty($URIParts[2])) {
+		$contentName = null;
+	} else {
+		$contentName = $URIParts[2];
 	}
 	
-	*/
+	require_once(CONTROLLERS.DS.$contentType.".php");
 		
-	require_once("app/controllers/index.php");
+	
+	// require_once("app/controllers/index.php");
