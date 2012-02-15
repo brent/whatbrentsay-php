@@ -16,7 +16,7 @@
 	defined("VIEWS") ? null : define("VIEWS", APP.DS."views");
 	
 	# Public directories
-	defined("PUBLIC") ? null : define("PUBLIC", SITE_ROOT.DS."public"); 
+	defined("PUB") ? null : define("PUB", SITE_ROOT.DS."public"); 
 	
 		
 	# Necessary classes

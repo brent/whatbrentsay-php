@@ -8,7 +8,7 @@ class simplePost extends Post {
 	
 		global $settings;
 		
-		$simplePostsDir 	= "public/".$settings['simplePosts'];
+		$simplePostsDir 	= $settings['simplePost'];
 		$metadata			= $settings['metadata'];
 		
 		$data = self::dir_scan($simplePostsDir, $metadata);

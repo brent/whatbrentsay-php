@@ -8,7 +8,7 @@ class HTMLPost extends Post {
 	
 		global $settings;
 		
-		$HTMLPostsDir 	= "public/".$settings['HTMLPosts'];
+		$HTMLPostsDir 	= $settings['HTMLPost'];
 		$metadata		= $settings['metadata'];
 		
 		$data = self::dir_scan($HTMLPostsDir, $metadata);

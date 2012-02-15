@@ -23,17 +23,18 @@ class Post {
 	public static function dir_scan($dir, $metadata) {
 		
 		// grab all the folders in the HTMLPosts dir
-		$allPosts = scandir($dir);
+		$allPosts = scandir("public/{$dir}");
 		
 		// loop through each folder in HTMLPosts dir
 		foreach($allPosts as $singleFolder) {
 			
 			// check for metadata.jon
-			if(file_exists($dir."/".$singleFolder."/".$metadata)) {
+			if(file_exists("public/".$dir."/".$singleFolder."/".$metadata)) {
 							
-				$jsonFile = file_get_contents($dir."/".$singleFolder."/".$metadata);
+				$jsonFile = file_get_contents("public/".$dir."/".$singleFolder."/".$metadata);
 				$json = json_decode($jsonFile);
 				$json->dir = $dir."/".$singleFolder;
+				$json->thumbnail = "public/".$json->dir."/".$json->thumbnail;
 				
 				// Sets each json object's array key equal to
 				// the post's id (allows for sorting)

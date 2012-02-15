@@ -34,7 +34,7 @@
 							<h2 class="title">{{ mostRecentHTMLPost.title }} <span class="date">{{ mostRecentHTMLPost.date }}</span></h2>
 						</div><!-- END .metadata -->
 						
-						<img class="thumb" src="{{ mostRecentHTMLPost.dir }}/{{ mostRecentHTMLPost.thumbnail }}" />
+						<img class="thumb" src="{{ mostRecentHTMLPost.thumbnail }}" />
 						
 					</a><!-- END .article -->
 					
@@ -53,7 +53,7 @@
 							<h2 class="title">{{ HTMLPost.title }} <span class="date">{{ HTMLPost.date }}</span></h2>
 						</div><!-- END .metadata -->
 						
-						<img class="thumb" src="{{ HTMLPost.dir }}/{{ HTMLPost.thumbnail }}" />
+						<img class="thumb" src="{{ HTMLPost.thumbnail }}" />
 						
 					</a><!-- END .article -->
 				

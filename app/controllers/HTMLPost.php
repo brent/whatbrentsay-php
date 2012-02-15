@@ -1,3 +1,3 @@
 <?php
 	
-	echo "Load ".$contentName;
+	echo "Load {$contentType}: {$contentName}";
