@@ -3,7 +3,7 @@
 	require_once(MODELS.DS."HTMLPost.class.php");
 	require_once(MODELS.DS."simplePost.class.php");
 	
-	$data[] = $settings;
+	$data['settings'] = $settings;
 	
 	# ALL POSTS
 	# $allPosts		= Post::list_all();
@@ -28,4 +28,4 @@
 	$data['mostRecentSimplePost']	= $mostRecentSimplePost;		
 		
 	# Send data to the view
-	echo $twig->render("index.php", $data);
+	echo $twig->render("index.html", $data);

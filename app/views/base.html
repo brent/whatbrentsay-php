@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ settings.siteTitle }}{% block pageTitle %}{% endblock %}</title>
+		<link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+		
+		{% block head %}
+		{% endblock %}
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+				
+		{% block content %}
+		{% endblock %}
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		{% block js %}
+		{% endblock %}
+		
+	</body>
+</html>

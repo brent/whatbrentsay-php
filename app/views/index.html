@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>{{ siteTitle }}</title>
-		<link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+{% extends "base.html" %}
+
+{% block head %}
+
 		<link rel="stylesheet" type="text/css" href="public/css/main.css" />
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
+		
+{% endblock %}
+
+{% block content %}
 	
 		<div id="wrapper">
 			
 			<div class="left">
 			
-				<h1 class="logo">{{ siteTitle }}</h1>
+				<h1 class="logo">{{ settings.siteTitle }}</h1>
 				
 				<div class="hello_copy">
 					
@@ -67,8 +68,10 @@
 			
 		</div><!-- END #wrapper -->
 		
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+{% endblock %}
+		
+{% block js %}
+
 		<script type="text/javascript" src="public/js/site.js"></script>
 		
-	</body>
-</html>
+{% endblock %}

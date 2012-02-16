@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block pageTitle %} - {{ metadata.title }}{% endblock %}
+
+{% block head %}
+
+		<link type="text/css" rel="stylesheet" href="../public/css/bit.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		
+{% endblock %}
+
+{% block content %}
+	
+		<div class="wrapper">
+			
+			<h2 class="bit_title">{{ metadata.title }}</h2>
+						
+			<p class="bit_content">
+				{{ fileContents|nl2br }}
+			</p>
+
+		</div><!-- END .wrapper -->
+		
+{% endblock %}
