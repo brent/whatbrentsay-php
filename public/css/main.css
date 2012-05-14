@@ -1,5 +1,5 @@
 body {
-	font-family: Lato, sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 }
 
@@ -52,7 +52,7 @@ div.left a:hover {
 }
 
 .hello_copy .portfolio {
-	color: #d4cb99;
+	color: #92BAC6;
 }
 
 .hello_copy .email {
@@ -132,6 +132,10 @@ img.thumb {
 	margin-bottom: 40px;
 	text-align: center;
 	font-size: 20px;
+}
+
+.bits_container a {
+	font-weight: 600;
 }
 
 .bits_container a:hover {

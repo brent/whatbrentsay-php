@@ -1,0 +1,15 @@
+I'm building a Content Management System.
+
+I have no idea what possessed me to do this. When I started putting energy back into this site, I did it because I wanted to write. I built a custom framework that would allow me to easily handle the various posts I would want to write here. It was barebones and basic but that was the point; I didn't want any obstacles I could use as an excuse not to produce content.
+
+As I got a few articles under my belt, I started to realize that there were features I needed. So, I built those features and produced content when I could. Then, I hit writer's block and I didn't produce much of anything.
+
+Except, I started writing code. When I got frustrated that I had nothing write, I looked at the primitive system I had started and kept adding to it. Soon, I realized it was just a series of poor hacks and started rewriting it. I didn't really understand how MVC apps worked, so I started building an MVC app from the ground up. I learned, I failed, I cursed. I spent a lot of time frustrated over the last few weeks but I'm at a point where I can see the light at the end of the tunnel.
+
+How the hell did I get here? I'm a designer and a front end developer. My knowledge of PHP is solely based on what I've been able to teach myself over the years. Why would I even bother doing something like this? Could I have hacked up a Wordpress install? Yes. Could I have purchased ExpressionEngine and done very little custom work? Yes. Could I have found any of the hundreds of obscure CMSes that someone tinkering in their spare time built (that sounds familiar...)? Yes. So why did I stubbornly put so much energy into this?
+
+The only reason I could come up with was passion. I think when you've found something that you're passionate about, you put energy into it however you can. I know the work I've put into What Brent Say is completely invisible to anyone reading this, but I've spent more time working on this site than I've spent on anything else recently--work excluded.
+
+And I think passion is what it all comes down to. I believe so strongly in finding what those passions are. What are you passionate about doing? What's that work look like? What are those activities? Who are the people in your life that you're passionate about? Who do you love? Who loves you? Find these things and hold onto them. Take them as far as you can and let them take you wherever they'll take you. You'll end up doing things you never thought you could do and in places you never thought you'd be.
+
+So, stay tuned; I haven't forgotten about my corner on the interwebs.
