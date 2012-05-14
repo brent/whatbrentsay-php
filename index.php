@@ -12,11 +12,11 @@
 		# simplePost folder (adjust for your folder name)
 		"simplePost"		=>	"bits",
 		
-		# HTMLPost metadata name
+		# HTMLPost/simplePost metadata name
 		"metadata"			=> "metadata.json",
 		
 		# Amount of articles displayed per page
-		"PostsPerPage" 		=> "5"
+		"PostsPerPage" 		=> "5",
 	
 	);
 	

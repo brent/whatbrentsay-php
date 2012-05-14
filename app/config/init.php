@@ -16,9 +16,9 @@
 	defined("VIEWS") ? null : define("VIEWS", APP.DS."views");
 	
 	# Public directories
-	defined("PUB") ? null : define("PUB", SITE_ROOT.DS."public"); 
+	defined("PUB") ? null : define("PUB", SITE_ROOT.DS."public");
+	defined("HTMLPOST") ? null: define("HTMLPOST", PUB.DS.$settings['HTMLPost']);
 	
-		
 	# Necessary classes
 	require_once(MODELS.DS."post.class.php");
 	
@@ -26,5 +26,5 @@
 	require_once(LIB.DS."Twig".DS."Autoloader.php");
 	Twig_Autoloader::register();
 	
-	$loader = new Twig_Loader_Filesystem(VIEWS);
+	$loader = new Twig_Loader_Filesystem(array(VIEWS, HTMLPOST));
 	$twig = new Twig_Environment($loader);
