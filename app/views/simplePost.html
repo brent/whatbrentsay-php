@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block pageTitle %} - {{ metadata.title }}{% endblock %}
+{% block pageTitle %}What Brent Say - {{ metadata.title }}{% endblock %}
 
 {% block head %}
 
@@ -12,6 +12,7 @@
 	
 		<div class="wrapper">
 			
+			<p class="bit_date">{{ metadata.date }}</p>
 			<h2 class="bit_title">{{ metadata.title }}</h2>
 						
 			<p class="bit_content">

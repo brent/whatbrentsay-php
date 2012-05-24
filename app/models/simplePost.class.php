@@ -1,50 +1,50 @@
 <?php
 
-require_once("post.class.php");
-
 class simplePost extends Post {
 	
-	public static function get_all() {
-	
-		global $settings;
-		
-		$simplePostsDir 	= $settings['simplePost'];
-		$metadata			= $settings['metadata'];
-		
-		$data = self::dir_scan($simplePostsDir, $metadata);
-		
-		rsort($data);
-		return $data;
-	
-	}
-	
 	public static function get_content($contentName) {
-		
+
+		/**
+		  * Imports $settings and grabs the specified simplePost.
+		  * Checks for .txt or .md extensions, otherwise it'll return null.
+		  * Also checks for your metadata.json file.
+	 	  *
+		  * NOTE: If you don't include the json file, the post will NOT
+		  *	be displayed.
+		  *
+		  *
+		 */
+		 
 		global $settings;
 		
-		$dir = PUB.DS.$settings['simplePost']."/".$contentName;
+		$dir = PUB.DS.$settings['simplePost'].'/'.$contentName;
 		
 		$dirContents = scandir(PUB.DS.$settings['simplePost']."/".$contentName);
 		
 		foreach($dirContents as $file) {
-						
-			if(preg_match("/.*.txt/", $file, $match) || preg_match("/.*.md/", $file, $match)) {
-			
-				$fileContents = file_get_contents($dir."/".$match[0]);
-				$data['fileContents'] = $fileContents;
-							
-			}
-			
-			if(preg_match("/.*.json/", $file, $match)) {
+
+			if(file_exists($dir.'/'.$settings['metadata'])) {
 				
-				$jsonFile = file_get_contents($dir."/".$match[0]);
+				$jsonFile = file_get_contents($dir.'/'.$settings['metadata']);
 				$json = json_decode($jsonFile);
-				$data['metadata'] = $json;				
+				$data['metadata'] = $json;
+							
+				if(preg_match("/.*.txt/", $file, $match) || preg_match("/.*.md/", $file, $match)) {
+				
+					$fileContents = file_get_contents($dir."/".$file);
+					$data['fileContents'] = $fileContents;
+								
+				} else {
+					$data['fileContents'] = null;
+				}
+				
+			} else {
+				$data['metadata'] = null;
 			}
-	
+			
 		}
 		
 		return $data;
 	}
-		
+
 }

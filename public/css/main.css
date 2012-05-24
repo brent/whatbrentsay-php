@@ -132,12 +132,31 @@ img.thumb {
 	margin-bottom: 40px;
 	text-align: center;
 	font-size: 20px;
-}
-
-.bits_container a {
+	overflow: hidden;
 	font-weight: 600;
 }
 
-.bits_container a:hover {
+.bits_container .pagination {
+	float: left;
+	cursor: pointer;
+	width: 20px;
+}
+
+.bits_container .pagination::selection {
+	background: transparent;
+}
+
+.bits_container .current_bit {
+	width: 600px;
+	float: left;
+	text-align: center;
+}
+
+.bits_container .next {
+	float: right;
+}
+
+
+.current_bit a:hover {
 	text-decoration: underline;
 }

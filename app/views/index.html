@@ -41,8 +41,12 @@
 					
 				</div><!-- END .row -->
 				
-				<div class="bits_container">
-					<a href="{{ mostRecentSimplePost.dir }}">Bit {{ mostRecentSimplePost.id }}: {{ mostRecentSimplePost.title }}</a>
+				<div id="bit_{{ mostRecentSimplePost.id }}" class="bits_container">
+					<a class="pagination prev">&laquo;</a>
+					<p class="current_bit">
+						<a href="{{ mostRecentSimplePost.dir }}">Bit {{ mostRecentSimplePost.id }}: {{ mostRecentSimplePost.title }}</a>
+					</p>
+					<a class="pagination next">&raquo;</a>
 				</div><!-- END .bits_container -->
 				
 				<div class="row">

@@ -9,10 +9,10 @@
 	# $allPosts		= Post::list_all();
 	
 	# All HTMLPosts
-	$HTMLPosts 		= HTMLPost::get_all();
+	$HTMLPosts 		= Post::get_all('HTMLPost');
 	
 	# All simplePosts
-	$simplePosts	= simplePost::get_all();
+	$simplePosts	= Post::get_all('simplePost');
 	
 	# Most Recent HTMLPost
 	$mostRecentHTMLPost 	= array_shift($HTMLPosts);
@@ -25,7 +25,8 @@
 	# $data['allPosts']				= $allPosts;
 	$data['mostRecentHTMLPost']		= $mostRecentHTMLPost;
 	$data['HTMLPosts']				= $HTMLPosts;
-	$data['mostRecentSimplePost']	= $mostRecentSimplePost;		
+	$data['mostRecentSimplePost']	= $mostRecentSimplePost;
+	$data['simplePosts']			= $simplePosts;
 		
 	# Send data to the view
 	echo $twig->render("index.html", $data);

@@ -2,13 +2,12 @@ RewriteEngine On
 
 # RewriteBase /
 
-# ignore system files and directories
+# Ignore everything in app/
 RewriteCond %{REQUEST_URI} !^/(app)/
 
-# Allow any files or directories that exist to be displayed directly
+# This should allow files or directories that exist to be displayed directly
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-
-# Rewrite all other URLs to index.php/URL
+# All other URLs go to to index.php/URL
 RewriteRule ^(.*)$ index.php?/$1 [L,QSA]

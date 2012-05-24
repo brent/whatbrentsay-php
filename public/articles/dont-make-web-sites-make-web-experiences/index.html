@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>2012</title>
+		<title>Don't Make Web Sites, Make Web Experiences</title>
 		<link type="text/css" rel="stylesheet" href="{{ global }}/css/reset.css" />
 		<link type="text/css" rel="stylesheet" href="{{ local }}/css/main.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		
@@ -11,22 +13,84 @@
 		
 			<div class="article">
 			
-				<p class="big_text">Twenty twelve. <span class="dark_blue">Two thousand and twelve. Two thousand, ten and two.</span> 2012.</p>
+				<h2 class="title narrow">Don't Make Websites, Make Web Experiences</h2>
 				
-				<p>Somehow, 2011 disappeared. It slipped away from us as we watched a glowing ball descend, while we stared at a countdown or clock, while we waited for a kiss when the numbers changed. It slipped away silently as we grasped for 2012, bubbling in a glass flute, waiting for us to drink it in.</p>
+				<p class="narrow">I was reading an <a href="http://trentwalton.com/2012/02/02/redefined/">article</a> by Trent Walton last week and in it he wrote something that resonated with me; I found it to be the article's most important takeaway.</p>
 				
-				<p>Many of us will resolve to be healthier, to take nothing for granted, to travel, or to finally do that thing we've been putting off. Statistically, that list will soon be forgotten. It's the spirit behind those resolutions that we need to hold on to.</p>
+				<blockquote class="big_quote">
+					<p><span class="quote_mark">&ldquo;</span>Web pages <span class="demphasized">(not that the term ever fit perfectly)</span> aren't really what we're building anymore.<span class="quote_mark">&rdquo;</span></p>
+				</blockquote>
 				
-				<p>Stay eager to grow; stay eager to improve. Keep that fire alive that burned in those last few moments of 2011. Reach out and grab this year&mdash;snatch it and hold it&mdash;and make it yours.</p>
+				<p class="narrow">He is one hundred percent correct. While the content we design exists on the web in a format most easily described as a page, we are not building web pages. Read that again. We are building experiences for the web. If you design content for the web&mdash;you may call yourself a web designer, UI designer, product designer, front-end ninja, unicorn, person who makes web stuff, whatever&mdash;then that should be your impetus, always.</p>
 				
-				<p class="big_text dark_blue">Happy Twenty Twelve.</p>
+				<p class="light narrow">You, designer, are building web experiences.</p>
+				
+				<p class="narrow">And you, designer, know that users experience the web in a myriad of ways and formats. That's the easy argument for designing responsively. If you intend for your users to experience&mdash;there's that word again&mdash;your content in different formats, then you must consider your intended UX. If you believe that some kind of change in UI and UX isn't necessary across formats, then I wish you luck&hellip; but not really.</p>
+				
+				<div class="cols">
+					
+					<p>Experience goes beyond responsive design, though. Responsive design is the front end of experience, if you'll entertain the analogy. The back end of experience is, naturally, UX. I've met a lot of designers who do not give UX the proper consideration or prominence in what they're doing. UX is the reason your users, clients, customers, etc. keep returning to your site (if your site can't be used, it doesn't matter how beautiful it is). It's the reason they use your share buttons and make you go viral. It's the reason your users sell your product for you. Experience drives your ecosystem, whatever it may be.</p>
+					
+					<p>Now, designer, I'm not saying you need to become a UX expert. You may not want to be; presumably, you're doing exactly what you'd like to do. Why mess with a good thing? You may not even be good at it; UX is not easy. It requires you to detach yourself from the perspective you have on your product; you know how it works better than any user will and, more importantly, you know why it works. Your users don't have either of those luxuries until you teach them how to use the product, and even then they won't see it the way you see it. </p>
+					
+					<p class="last">What I am saying, is the more you consider UX the better you will be as a person who makes web stuff. It takes a small shift in thinking from "Where would this button look best" to "Where does this button make sense." Every time you pick the former, you do a disservice to your users. Every time you make something less easy for your users, you make the overall experience of the product a little less good. Place the button where it needs to go then figure out what it needs to look like in that location. That's the high road. That's your Manifest Destiny.</p>
+					
+				</div><!-- END .cols -->
+				
+				<div class="sites">
+					
+					<div>
+						<img src="{{ local }}/img/stihdw.png" />
+						<p><a href="http://startupsthisishowdesignworks.com">Startups, This Is How Design Works</a></p>
+					</div>
+					
+					<div>
+						<img src="{{ local }}/img/google.png" />
+						<p><a href="http://www.google.com/green/storyofsend/desktop/">The Story of Send</a></p>
+					</div>
+					
+					<div>
+						<img src="{{ local }}/img/lore.png" />
+						<p><a href="http://lore.com/story">Lore</a></p>
+					</div>
+					
+					<div class="last">
+						<img src="{{ local }}/img/nike.png" />
+						<p><a href="http://www.nike.com/jumpman23/aj2012/">Air Jordan 2012</a></p>
+					</div>
+					
+				</div><!-- END .sites -->
+				
+				<p>So step back and take a look at the landscape. Take a look at some of the <span class="sites">wonderful experiences on the web right now</span>. The best ones feel alive. They show you content and react to your input in ways you understand. They don't trade the joy of using something well crafted for a few shiny pixels, an extra ad unit, or building a list of email addresses. They put you, the user, first. That's why the experience is great. That's why you share them. That's why they do well. We're building a web based on the experiences we want our users to have which are rooted in the stories we want to tell.</p>
+				
+				<p class="light">Tell stories. Build experiences.</p>
 				
 			</div><!-- END .article -->
 
 		</div><!-- END #wrapper -->
 		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
-
+			
+			$(document).ready(function() {
+			
+				$('div.sites').fadeTo(0, 0.3);
+				
+				$('span.sites').hover(function() {
+					$('div.sites').fadeTo(300, 1);
+				}, function() {
+					$('div.sites').fadeTo(500, 0.3);
+				});
+				
+				$('div.sites').hover(function(){
+					$(this).fadeTo(300, 1);
+				}, function() {
+					$(this).fadeTo(500, 0.3);
+				});
+			
+			});
+			
+			
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-15909605-2']);
 		  _gaq.push(['_trackPageview']);

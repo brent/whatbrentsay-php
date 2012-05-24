@@ -8,6 +8,6 @@
 	# if you decide to change the names of folders in
 	# the file structure, which you probably won't do anyway.
 	$data['global'] 	= "../public";
-	$data['local'] 	= "../public/{$settings['HTMLPost']}/{$contentName}";
+	$data['local'] 		= "../public/{$settings['HTMLPost']}/{$contentName}";
 		
 	echo $twig->render("HTMLPost.html", $data);

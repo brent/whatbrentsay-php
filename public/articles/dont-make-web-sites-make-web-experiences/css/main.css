@@ -1,29 +1,111 @@
 body {
-	background: url('../img/2012_tile.png') left -3% repeat-y #333;
+	background: #a4c0c7;
+}
+
+a {
+	color: #bdf4ff;
+	text-decoration: underline;
 }
 
 #wrapper {
 	width: 940px;
 	padding: 0 10px;
+	margin: 0 auto;
 }
 
-div.article {
-	width: 560px;
-	padding: 80px;
+.article {
+	color: #e7f2f5;
+	font: 16px/36px "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+.article .title {
+	font-size: 38px;
+	color: #90b1b9;
+	text-transform: capitalize;
+	margin: 80px auto;
+	text-shadow: 0 1px rgba(255,255,255,0.2);
+}
+
+.article p {
+	margin-bottom: 80px;
+}
+
+.narrow {
+	width: 460px;
+	margin: 0 auto;
+}
+
+.light {
 	color: #fff;
-	font: 24px/50px Georgia, sans-serif;
-	margin-left: 360px;
+	font-weight: 700;
 }
 
-div.article p {
-	margin-bottom: 100px;
+.big_quote {
+	font: 71px/66px "Crimson Text", serif;
+	width: 580px;
+	margin: 0 auto;
 }
 
-.big_text {
-	font-size: 48px;
-	line-height: 1.25;
+.big_quote, .big_quote p {
+	text-indent: -0.7em;
 }
 
-.dark_blue {
-	color: #52657d;
+.quote_mark {
+	color: #82a4ad;
+	font-size: 171px;
+	vertical-align: -40px;
+}
+
+.big_quote .demphasized {
+	color: #d6e8ec;
+}
+
+.cols {
+	background: url('../img/formats.png') top center no-repeat;
+	overflow: hidden;
+	padding-top: 240px;
+	margin: 160px 0 60px;
+	font-size: 14px;
+}
+
+.cols p {
+	float: left;
+	width: 273px;
+	margin-right: 38px; 
+}
+
+.col p.last {
+	margin-right: 0;
+}
+
+div.sites {
+	margin-bottom: 120px;
+	overflow: hidden;
+}
+
+div.sites a {
+	font-size: 12px;
+}
+
+div.sites p {
+	line-height: 1em;
+	margin: 0;
+}
+
+div.sites div {
+	float: left;
+	margin-right: 60px;
+	text-align: center;
+	cursor: pointer;
+	width: 187px;
+}
+
+div.sites div.last {
+	margin-right: 0;
+}
+
+span.sites {
+	cursor: pointer;
+	color: #bdf4ff;
 }

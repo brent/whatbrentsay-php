@@ -4,9 +4,6 @@
 	
 	$data['settings'] = $settings;
 	
-	$contents = simplePost::get_content($contentName);
-	
-	$data['fileContents'] = $contents['fileContents'];
-	$data['metadata'] = $contents['metadata'];
+	$data = simplePost::get_content($contentName);
 	
 	echo $twig->render("simplePost.html", $data);
