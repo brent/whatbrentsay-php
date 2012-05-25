@@ -1,6 +1,7 @@
 {
-	"id"		:	"5",
-	"title"		: 	"Don't Make Web Sites, Make Web Experiences",
-	"date"		:	"May 15, 2012",
-	"thumbnail"	:	"img/thumb.png"
+	"id"				:	"5",
+	"title"				: 	"Don't Make Web Sites, Make Web Experiences",
+	"date"				:	"May 15, 2012",
+	"thumbnail"			:	"img/thumb.png",
+	"thumbnail_small" 	: "img/thumb_sml.png"
 }

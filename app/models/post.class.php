@@ -21,12 +21,12 @@ class Post {
 		global $settings;
 		
 		if($postType == 'HTMLPost') {
-			$postDir 	= $settings['HTMLPost'];
+			$postDir = $settings['HTMLPost'];
 		} elseif($postType == 'simplePost') {
-			$postDir 	= $settings['simplePost'];
+			$postDir = $settings['simplePost'];
 		}
 		
-		$metadata		= $settings['metadata'];
+		$metadata = $settings['metadata'];
 		
 		$data = self::dir_scan($postDir, $metadata);
 		
@@ -56,7 +56,14 @@ class Post {
 				$jsonFile = file_get_contents(PUB.DS.$dir.DS.$singleFolder.DS.$metadata);
 				$json = json_decode($jsonFile);
 				$json->dir = $dir.DS.$singleFolder;
-				$json->thumbnail = "public".DS.$json->dir.DS.$json->thumbnail;
+				
+				if(isset($json->thumbnail)) {
+					$json->thumbnail = "public".DS.$json->dir.DS.$json->thumbnail;
+				}
+				
+				if(isset($json->thumbnail_small)) {
+					$json->thumbnail_small = "public".DS.$json->dir.DS.$json->thumbnail_small;
+				}
 				
 				// Sets each json object's array key equal to
 				// the post's id (allows for sorting)

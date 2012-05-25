@@ -26,7 +26,7 @@ div.left a:hover {
 }
 
 .logo {
-	background: url(../img/logo.png) no-repeat center;
+	background: url('../img/logo.png') no-repeat center;
 	width: 100%;
 	height: 71px;
 	text-indent: -9999px;
@@ -71,17 +71,16 @@ div.right {
 .article {
 	display: block;
 	position: relative;
-	border: 1px solid #ddd;
 	margin-bottom: 40px;
 	position: relative;
-	width: 638px;
-	height: 298px;
+	width: 640px;
+	height: 300px;
 	overflow: hidden;
 }
 
 .article.small {
 	width: 300px;
-	height: 139px;
+	height: 141px;
 }
 
 .article.small.left {
@@ -159,4 +158,14 @@ img.thumb {
 
 .current_bit a:hover {
 	text-decoration: underline;
+}
+
+.current_bit a.loading {
+	background: url('../img/ajax-loader.gif') no-repeat center;
+	display: block;
+	width: 16px;
+	height: 11px;
+    margin: 0 auto;
+    position: relative;
+    top: 6px;
 }

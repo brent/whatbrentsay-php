@@ -1,6 +1,7 @@
 {
-	"id"		:	"3",
-	"title"		: 	"Thanksgiving '11",
-	"date"		:	"Nov 27, 2011",
-	"thumbnail"	:	"img/thumb.jpg"
+	"id"				:	"3",
+	"title"				: 	"Thanksgiving '11",
+	"date"				:	"Nov 27, 2011",
+	"thumbnail"			:	"img/thumb.jpg",
+	"thumbnail_small" 	: 	"img/thumb_sml.jpg"
 }

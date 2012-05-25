@@ -1,6 +1,7 @@
 {
-	"id"		: 	"2",
-	"title"		: 	"Slowtate",
-	"date"		:	"Nov 22, 2011",
-	"thumbnail"	:	"img/thumb.jpg"		
+	"id"				: 	"2",
+	"title"				: 	"Slowtate",
+	"date"				:	"Nov 22, 2011",
+	"thumbnail"			:	"img/thumb.jpg",
+	"thumbnail_small" 	: 	"img/thumb_sml.jpg"
 }
