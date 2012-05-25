@@ -16,18 +16,6 @@ $(document).ready(function() {
 	
 	});
 	
-	/*
-	$('.current_bit a').on({
-		ajaxStart: function() {
-			$(this).addClass('loading');
-			$(this).text('');
-		},
-		ajaxStop: function() {
-			$(this).removeClass('loading');
-		}
-	});
-	*/
-	
 	$('a.pagination').click(function(){
 		
 		if($(this).hasClass('next')) {
