@@ -6,7 +6,7 @@
 	defined('DS') 			? 	null : define('DS', DIRECTORY_SEPARATOR);
 	
 	# Top level site root
-	$cwd = dirname(dirname(__DIR__));
+	$cwd = dirname(dirname(dirname(__FILE__)));
 	defined('SITE_ROOT') 	? 	null : define('SITE_ROOT', $cwd);
 	
 	# App directories

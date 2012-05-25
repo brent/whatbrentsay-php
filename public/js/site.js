@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 	
 	$('a.pagination').click(function(){
-					
+		
 		if($(this).hasClass('next')) {
 			var direction = 'next';
 		} else {
