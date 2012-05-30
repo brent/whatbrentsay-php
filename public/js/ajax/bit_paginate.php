@@ -7,21 +7,6 @@
 	require_once($path_to_init);
 	
 	$data = Post::get_all('simplePost');
-	
+	sort($data);
+		
 	echo json_encode($data);
-	
-	/*
-	if($_GET['direction']=='next') {
-		$postId = $_GET['current_id'] + 1;
-	} elseif($_GET['direction']=='prev') {
-		$postId = $_GET['current_id'] - 1;
-	} else {
-		$postId = null;
-	}
-	
-	foreach($data as $post) {
-		if($post->id == $postId) {
-			echo json_encode($post);
-		}
-	}
-	*/
