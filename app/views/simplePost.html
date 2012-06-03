@@ -15,9 +15,9 @@
 			<p class="bit_date">{{ metadata.date }}</p>
 			<h2 class="bit_title">{{ metadata.title }}</h2>
 						
-			<p class="bit_content">
-				{{ fileContents|nl2br }}
-			</p>
+			<div class="bit_content">
+				{{ fileContents|raw }}
+			</div>
 
 		</div><!-- END .wrapper -->
 		

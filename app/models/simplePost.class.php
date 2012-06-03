@@ -28,18 +28,20 @@ class simplePost extends Post {
 				$jsonFile = file_get_contents($dir.'/'.$settings['metadata']);
 				$json = json_decode($jsonFile);
 				$data['metadata'] = $json;
-							
+						
 				if(preg_match("/.*.txt/", $file, $match) || preg_match("/.*.md/", $file, $match)) {
-				
+					
+					require_once(LIB.DS.'PHP_Markdown/markdown.php');
+					
 					$fileContents = file_get_contents($dir."/".$file);
-					$data['fileContents'] = $fileContents;
-								
+					$data['fileContents'] = Markdown($fileContents);
+					
 				} else {
-					$data['fileContents'] = null;
+					$data['fileContents'] = 'could not load file';
 				}
 				
 			} else {
-				$data['metadata'] = null;
+				$data['metadata'] = 'metadata not present';
 			}
 			
 		}
