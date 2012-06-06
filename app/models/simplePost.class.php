@@ -13,38 +13,33 @@ class simplePost extends Post {
 		  *	be displayed.
 		  *
 		  *
-		 */
+		  */
 		 
 		global $settings;
 		
-		$dir = PUB.DS.$settings['simplePost'].'/'.$contentName;
+		$dir = PUB.DS.$settings['simplePost'].DS.$contentName;
 		
-		$dirContents = scandir(PUB.DS.$settings['simplePost']."/".$contentName);
+		$dirContents = scandir(PUB.DS.$settings['simplePost'].DS.$contentName);
+		$dirContents = array_slice($dirContents, 2);
 		
 		foreach($dirContents as $file) {
-
-			if(file_exists($dir.'/'.$settings['metadata'])) {
-				
-				$jsonFile = file_get_contents($dir.'/'.$settings['metadata']);
+		
+			if(preg_match('/.json$/', $file)) {
+			
+				$jsonFile = file_get_contents($dir.DS.$settings['metadata']);
 				$json = json_decode($jsonFile);
 				$data['metadata'] = $json;
-							
-				if(preg_match("/.*.txt/", $file, $match) || preg_match("/.*.md/", $file, $match)) {
 				
-					$fileContents = file_get_contents($dir."/".$file);
-					$data['fileContents'] = $fileContents;
+			} else if(preg_match("/.txt$/", $file) || preg_match("/.md$/", $file)) {
 								
-				} else {
-					$data['fileContents'] = null;
-				}
+				$fileContents = file_get_contents($dir.DS.$file);
+				$data['fileContents'] = $fileContents;
 				
-			} else {
-				$data['metadata'] = null;
 			}
 			
 		}
 		
 		return $data;
 	}
-
+	
 }
