@@ -1,7 +1,5 @@
 RewriteEngine On
 
-# RewriteBase /
-
 # Ignore everything in app/
 RewriteCond %{REQUEST_URI} !^/(app)/
 
