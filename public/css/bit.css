@@ -53,6 +53,10 @@ body {
 	text-decoration: underline;
 }
 
+.header a.pagination:visited {
+	color: inherit;
+}
+
 .wrapper {
 	width: 500px;
 	margin: 100px auto 0;
@@ -76,11 +80,11 @@ body {
 }
 
 .bit_content a {
-	color: #9916CC;
+	color: #11B8E0;
 }
 
 .bit_content a:visited {
-	color: #A891B1;
+	color: #73A1AC;
 }
 
 .bit_content p {

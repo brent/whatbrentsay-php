@@ -1,7 +1,9 @@
-About a week ago, my buddy, Dan (@danberko), said that he'd like to see more content at What Brent Say. He was onto something.
+About a week ago, my buddy, Dan ([@danberko][1]), said that he'd like to see more content at What Brent Say. He was onto something.
 
 When I first launched the original What Brent Say, I had two types of posts. There were longer form, designed posts called features, and shorter, rawer posts called bits. Features were the same as the articles I've been writing and designing here. Bits were a little different.
 
 Bits were short and less filtered, which allowed me to put them out with greater frequency and less planning. If I had a random thought or idea, bits were the outlet. If I wanted to rant, bits were the answer. If I just wanted to give a big internet middle finger to someone.. well, you get the picture.
 
 I don't have a targeted frequency for bits but expect at least one a week, so keep checking in.
+
+[1]: http://twitter.com/danberko	"Twitter"
