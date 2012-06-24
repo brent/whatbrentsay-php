@@ -3,13 +3,25 @@
 {% block pageTitle %}What Brent Say - {{ metadata.title }}{% endblock %}
 
 {% block head %}
-
+		
+		<link rel="stylesheet" type="text/css" href="../public/css/reset.css" />
 		<link type="text/css" rel="stylesheet" href="../public/css/bit.css" />
 		
 {% endblock %}
 
 {% block content %}
-	
+		
+		<div class="header">
+			<div class="inner">
+				<h1 class="logo"><a href="../">What Brent Say</a></h1>
+				<div class="pagination">
+					<a class="pagination prev">&laquo; prev</a>
+					<input class="current_bit_id" type="hidden" value="{{ metadata.id }}" />
+					<a class="pagination next">next &raquo;</a>
+				</div><!-- END .pagination -->
+			</div><!-- END .header_inner -->
+		</div><!-- END .header -->
+		
 		<div class="wrapper">
 			
 			<p class="bit_date">{{ metadata.date }}</p>
@@ -21,4 +33,8 @@
 
 		</div><!-- END .wrapper -->
 		
+{% endblock %}
+
+{% block js %}
+	<script type="text/javascript" src="../public/js/site.js"></script>
 {% endblock %}

@@ -18,9 +18,9 @@ $(document).ready(function() {
 	
 	});
 	
-	$('a.pagination').click(function(){
+	$('.bits_container a.pagination').click(function(){
 		
-		var currnet_bit_title = $('.current_bit a').text();
+		var current_bit_title = $('.current_bit a').text();
 		$('.current_bit a').text('');
 		$('.current_bit a').addClass('loading');
 		
@@ -51,7 +51,7 @@ $(document).ready(function() {
 		
 		if(new_bit_id === null || typeof all_bits[new_bit_id] === 'undefined') {
 			
-			$('.current_bit a').text(currnet_bit_title);
+			$('.current_bit a').text(current_bit_title);
 			
 		} else {	
 			
@@ -65,6 +65,31 @@ $(document).ready(function() {
 
 		return false;
 				
+	});
+	
+	$('div.pagination a.pagination').click(function() {
+		
+		var all_bits,
+			new_bit_id,
+			bit_id = $('div.pagination .current_bit_id').val();
+		
+		$.ajax({
+			url: '../public/js/ajax/bit_paginate.php',
+			dataType: 'json',
+			async: false,
+			success: function(data) { all_bits = data; }
+		});
+		
+		if($(this).hasClass('next')) {
+			new_bit_id = parseInt(bit_id) + 1 - 1;
+		} else if ($(this).hasClass('prev')) {
+			new_bit_id = parseInt(bit_id) - 1 - 1;
+		} else {
+			new_bit_id = null;
+		}
+		
+		$(this).attr('href', '../'+all_bits[new_bit_id].dir);
+							
 	});
 		
 });

@@ -138,7 +138,14 @@ img.thumb {
 .bits_container .pagination {
 	float: left;
 	cursor: pointer;
-	width: 20px;
+	font-size: 14px;
+	position: relative;
+	top: 2px;
+/* 	width: 20px; */
+}
+
+.bits_container .pagination:hover {
+	text-decoration: underline;
 }
 
 .bits_container .pagination::selection {
@@ -146,7 +153,8 @@ img.thumb {
 }
 
 .bits_container .current_bit {
-	width: 600px;
+/* 	width: 600px; */
+	width: 555px;
 	float: left;
 	text-align: center;
 }

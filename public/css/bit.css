@@ -4,14 +4,69 @@ body {
 	color: #444;
 }
 
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #fff;
+	background: rgba(255,255,255,0.95);
+	padding: 5px 0 5px 5px;
+	overflow: hidden;
+}
+
+.header .inner {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.header .logo {
+	background: url('../img/logo_small.png') no-repeat;
+	width: 86px;
+	height: 36px;
+	text-indent: -9999px;
+	margin: 0;
+	float: left;
+}
+
+.header .logo a {
+	display: block;
+}
+
+.header div.pagination {
+	float: right;
+	padding: 5px 0 5px 0;
+}
+
+.header a.pagination {
+	display: block;
+	float: left;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-size: 14px;
+}
+
+.header a.pagination.next {
+	padding-right: 0;
+}
+
+.header a.pagination:hover {
+	text-decoration: underline;
+}
+
 .wrapper {
 	width: 500px;
 	margin: 100px auto 0;
 }
 
+.bit_date {
+	color: #aaa;
+}
+
 .bit_title {
 	font-size: 28px;
 	margin-bottom: 20px;
+	font-weight: 600;
+	margin: 10px 0 40px;
 }
 
 .bit_content {
@@ -20,6 +75,21 @@ body {
 	padding-bottom: 60px;
 }
 
+.bit_content a {
+	color: #9916CC;
+}
+
+.bit_content a:visited {
+	color: #A891B1;
+}
+
 .bit_content p {
 	margin-bottom: 40px;
+}
+
+.bit_content blockquote {
+	color: #a9a9a9;
+ 	border-left: 3px solid #f0f0f0;
+	padding: 0 40px;
+	margin: 0;
 }

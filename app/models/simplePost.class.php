@@ -19,7 +19,7 @@ class simplePost extends Post {
 		
 		$dir = PUB.DS.$settings['simplePost'].DS.$contentName;
 		
-		$dirContents = scandir(PUB.DS.$settings['simplePost'].DS.$contentName);
+		$dirContents = scandir($dir);
 		$dirContents = array_slice($dirContents, 2);
 		
 		foreach($dirContents as $file) {
