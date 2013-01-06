@@ -12,6 +12,6 @@ I'm hoping to open source this "CMS" for anyone who happens to have the same spe
 
 It also means there's going to be more content here, probably a lot more of these bits on a somewhat regular basis. Articles will come when they come, but hopefully more often, as well. I've invested time building this, so I'll keep on keepin' on even if you don't come back and read the next thing, though I hope you do.
 
-[1]: http://whatbrentsay.com/bits/cmses_and_passions "CMSes And Passions"
+[1]: http://whatbrentsay.com/bits/cmses_and_passions "CMSes and Passions"
 [2]: http://twig.sensiolabs.org/ "Twig"
 [3]: http://daringfireball.net/projects/markdown/ "Markdown"

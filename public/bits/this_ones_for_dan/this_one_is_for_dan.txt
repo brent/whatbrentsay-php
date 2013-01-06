@@ -6,4 +6,4 @@ Bits were short and less filtered, which allowed me to put them out with greater
 
 I don't have a targeted frequency for bits but expect at least one a week, so keep checking in.
 
-[1]: http://twitter.com/danberko	"Twitter"
+[1]: http://twitter.com/danberko "Twitter"

@@ -1,0 +1,16 @@
+I was reading [The Verge's review][1] of [Google's Nexus 7 tablet][2] and enjoyed Josh Topolsky's experience with Google Now.
+
+> Google Now goes much deeper than just voice recognition and AI. It actually learns what you do through searching and starts to identify patterns. Additionally, it will give you information before you even ask for it. For instance, in the short period of time I've been using Now, it became convinced that I lived at my hotel in San Francisco (sad, I know). When I went out earlier today, it prompted me for directions back to my "house." Of course I corrected it and gave it my actual home address, but the functionality is fascinating. Later, when I left the hotel for the airport, Google Now presented me with a map and an estimated travel time of 27 minutes without having been asked to do so.
+
+I really like what Google Now is attempting to do. I recognize it will be immediately alarming to anyone who believes Google has too much of their personal information already, but that doesn't make its potential any less exciting.
+
+Passive information is a silent juggernaut on always connected, mobile devices. It's the reason Android has had widgets since its inception, why Windows Phone 7's live tiles are so damn fun, and why iOS's home screens feel so static.
+
+The key, as Topolsky goes on to point out, is making your device work for you in helpful ways with the _least amount of input effort_. That's part of why Siri is such a cool product--conversational language is easy for us and when it does return specific, processed, and relevant data we get excited. Siri can make it easy and Google Now is attempting the same thing, albeit differently.
+
+> Now is far from perfect, and it certainly can't go toe-to-toe with Siri in every department -- but it's also not supposed to. After only using it for a couple of days, I'm deeply intrigued and excited about its possibilities. It's doing something that computers rarely can pull off without becoming annoying -- which is thinking for you -- and so far it's doing a relatively good job in its limited way.
+
+> Now feels like science fiction in many ways. Like a future technology that got here a little early.
+
+[1]: http://www.theverge.com/2012/6/29/3125396/google-nexus-7-review
+[2]: http://www.google.com/nexus/#/7

@@ -3,73 +3,60 @@
 {% block head %}
 		
 		<link rel="stylesheet" type="text/css" href="public/css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="public/css/main.css" />
+		<link rel="stylesheet" media="screen" type="text/css" href="public/css/main.css" />
 		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		
+				
 {% endblock %}
 
 {% block content %}
 	
 		<div id="wrapper">
 			
-			<div class="left">
+			<div class="header">
+				
+				<div class="inner">
+				
+					<h1 class="logo">{{ settings.siteTitle }}</h1>
+				
+				</div><!-- END .inner -->
+				
+			</div><!-- END .header -->
 			
-				<h1 class="logo">{{ settings.siteTitle }}</h1>
-				
-				<div class="hello_copy">
-					
-					<p>I'm Brent Meyer, a web designer, developer, and geek. This is where I write.</p>
-					
-					<p>You should <a class="twitter" href="http://twitter.com/brentmeyer" target="_blank">follow me on twitter</a> if you like what I say. Feel free to keep up with <a class="dribbble" href="http://dribbble.com/brentmeyer" target="_blank">what I'm working on dribbble</a>, too. You can take a look at <a class="portfolio" href="http://brentmeyer.is" target="_blank">some of my work</a> or <a class="email" href="mailto:brent@brentemeyer.com">email me</a> if you just want to say hi.</p>
-					
-				</div><!-- END .hello_copy -->
-								
-			</div><!-- END .left -->
+			{% for post in allPosts %}
 			
-			<div class="right main">
-				
-				<div class="row">
-				
-					<a class="article" href="{{ mostRecentHTMLPost.dir }}">
+			{% if post.type == 'bits' %}
+			
+			<div class="post bit">
+			
+				<div class="inner">
 					
-						<div class="metadata">
-							<h2 class="title">{{ mostRecentHTMLPost.title }} <span class="date">{{ mostRecentHTMLPost.date }}</span></h2>
-						</div><!-- END .metadata -->
-						
-						<img class="thumb" src="{{ mostRecentHTMLPost.thumbnail }}" />
-						
-					</a><!-- END .article -->
+					<h2><a href="{{ post.dir }}">{{ post.title }}</a></h2>
+					<h3 class="date">{{ post.date }}</h3>
 					
-				</div><!-- END .row -->
+				</div>
+			
+			</div><!-- END .post.bit -->
+			
+			{% else %}
+			
+			<div class="post article">
+			
+				<a class="inner" href="{{ post.dir }}">
 				
-				<div id="bit_{{ mostRecentSimplePost.id }}" class="bits_container">
-					<a class="pagination prev">&laquo; prev</a>
-					<p class="current_bit">
-						<a href="{{ mostRecentSimplePost.dir }}">Bit {{ mostRecentSimplePost.id }}: {{ mostRecentSimplePost.title }}</a>
-					</p>
-					<a class="pagination next">next &raquo;</a>
-				</div><!-- END .bits_container -->
-				
-				<div class="row">
-				{% for HTMLPost in HTMLPosts %}
-				
-					<a class="article small {{ cycle(['right', 'left'], loop.index) }}" href="{{ HTMLPost.dir }}">
+					<div class="metadata">
+						<h2 class="title">{{ post.title }}</h2>
+						<h3 class="date">{{ post.date }}</h3>
+					</div><!-- END .metadata -->
 					
-						<div class="metadata">
-							<h2 class="title">{{ HTMLPost.title }} <span class="date">{{ HTMLPost.date }}</span></h2>
-						</div><!-- END .metadata -->
-						
-						<img class="thumb" src="{{ HTMLPost.thumbnail_small }}" />
-						
-					</a><!-- END .article -->
+					<img class="thumb" src="{{ post.thumbnail }}" />
 				
-				{% if loop.index is divisibleby(2) %}	
-				</div><!-- END .row -->
-				<div class="row">
-				{% endif %}
-				{% endfor %}
-				
-			</div><!-- END .right.main -->
+				</a><!-- END .inner -->
+			
+			</div><!-- END .post.article -->
+			
+			{% endif %}
+			
+			{% endfor %}
 			
 		</div><!-- END #wrapper -->
 		
@@ -77,6 +64,8 @@
 		
 {% block js %}
 		
+		<script type="text/javascript" src="public/js/jquery.color.js"></script>
+		<script type="text/javascript" src="public/js/colorize.js"></script>
 		<script type="text/javascript" src="public/js/site.js"></script>
 		
 {% endblock %}
