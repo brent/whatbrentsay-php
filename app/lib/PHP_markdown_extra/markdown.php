@@ -757,7 +757,7 @@ class Markdown_Parser {
 			$url = $this->urls[$link_id];
 			$url = $this->encodeAttribute($url);
 			
-			$result = "<a href=\"$url\"";
+      $result = "<a href=\"$url\" target=\"_blank\"";
 			if ( isset( $this->titles[$link_id] ) ) {
 				$title = $this->titles[$link_id];
 				$title = $this->encodeAttribute($title);
@@ -781,7 +781,7 @@ class Markdown_Parser {
 
 		$url = $this->encodeAttribute($url);
 
-		$result = "<a href=\"$url\"";
+		$result = "<a href=\"$url\" target=\"_blank\"";
 		if (isset($title)) {
 			$title = $this->encodeAttribute($title);
 			$result .=  " title=\"$title\"";

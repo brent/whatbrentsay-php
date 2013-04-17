@@ -13,6 +13,10 @@ strong {
 	color: #444;
 }
 
+hr {
+  margin: 40px 0;
+}
+
 .header {
 	position: fixed;
 	top: 0;
@@ -102,6 +106,14 @@ strong {
 
 .bit_content p {
 	margin-bottom: 40px;
+}
+
+.bit_content li {
+  list-style: disc;
+}
+
+.bit_content li, .bit_content li p {
+  margin-bottom: 0;
 }
 
 .bit_content blockquote {
